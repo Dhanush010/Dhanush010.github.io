@@ -85,5 +85,5 @@ This project is open source and available under the [MIT License](LICENSE).
 Feel free to reach out if you have any questions or would like to discuss a project:
 
 - Email: dj2680@nyu.edu
-- LinkedIn: [Connect on LinkedIn]([https://linkedin.com/in/dhanush-dev](https://www.linkedin.com/in/dhanushkumar-jv-2b0564248/))
-- GitHub: [View my work]([https://github.com/dhanush-dev](https://github.com/Dhanush010?tab=repositories))
+- LinkedIn: [[Connect on LinkedIn](https://www.linkedin.com/in/dhanushkumar-jv-2b0564248/)]
+- GitHub: [[https://github.com/dhanush-dev](https://github.com/Dhanush010?tab=repositories)]
