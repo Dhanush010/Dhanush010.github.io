@@ -22,8 +22,15 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install deps
-        run: npm install
+      - name: Clean npm cache and remove lockfile
+        run: |
+          npm cache clean --force
+          rm -f package-lock.json
+
+      - name: Install deps (workaround rollup optional deps)
+        run: |
+          npm install
+          npm install
 
       - name: Build
         run: npm run build -- --verbose
