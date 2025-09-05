@@ -23,14 +23,10 @@ jobs:
           node-version: 18
 
       - name: Install deps
-        run: |
-          cd "Dhanush Website"
-          npm install
+        run: npm install
 
       - name: Build
-        run: |
-          cd "Dhanush Website"
-          npm run build -- --verbose
+        run: npm run build -- --verbose
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -38,7 +34,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "Dhanush Website/dist"
+          path: ./dist
 
   deploy:
     needs: build
