@@ -23,12 +23,14 @@ jobs:
           node-version: 18
 
       - name: Install deps
-        run: npm ci
-        working-directory: "./Dhanush Website"
+        run: |
+          cd "Dhanush Website"
+          npm ci
 
       - name: Build
-        run: npm run build
-        working-directory: "./Dhanush Website"
+        run: |
+          cd "Dhanush Website"
+          npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
