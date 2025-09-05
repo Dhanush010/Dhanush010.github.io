@@ -1,0 +1,431 @@
+---
+import { siteConfig } from "../config";
+---
+
+        <div
+          id="hero"
+          class="relative isolate overflow-hidden py-24 md:h-screen transition-colors duration-300"
+        >
+          <!-- Ultra-dark blue-grey space background -->
+          <div class="absolute inset-0 -z-20">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950 to-slate-950"></div>
+            
+            <!-- Deepest space gradient overlays -->
+            <div class="absolute top-0 left-0 w-full h-full">
+              <!-- Ultra-dark space gradients -->
+              <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-slate-900/10 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900/8 to-transparent"></div>
+              
+              <!-- Minimal cosmic dust -->
+              <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-slate-800/3 to-transparent opacity-20"></div>
+              <div class="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-radial from-slate-800/2 to-transparent opacity-15"></div>
+              <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-radial from-slate-800/1 to-transparent opacity-10"></div>
+            </div>
+          </div>
+
+          <!-- Low-polygon geometric background -->
+          <div id="geometric-container" class="absolute inset-0 -z-10">
+            <canvas id="geometric-canvas" class="absolute inset-0 w-full h-full"></canvas>
+          </div>
+
+          <!-- Subtle radial overlay for depth -->
+          <div
+            class="absolute inset-0 -z-10"
+            style="background: radial-gradient(ellipse 1200px 800px at 50% 50%, rgba(99, 102, 241, 0.05) 0%, rgba(79, 70, 229, 0.03) 30%, rgba(55, 48, 163, 0.02) 60%, transparent 100%)"
+          >
+          </div>
+
+  <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
+    <div>
+                  <h2
+              class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-blue-200 animate-fade-in"
+            >
+              Hello! 👋
+            </h2>
+            <h1
+              class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-white animate-fade-in animation-delay-200"
+            >
+              I'm <span class="text-blue-400 bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent"
+                >{siteConfig.name}</span
+              >
+            </h1>
+            <p
+              class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-blue-300 animate-fade-in animation-delay-400"
+            >
+              {siteConfig.title}
+            </p>
+    </div>
+  </div>
+
+            <div
+            class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-blue-300 animate-fade-in animation-delay-600"
+          >
+    {
+      siteConfig.social?.email && (
+        <a
+          href={`mailto:${siteConfig.social.email}`}
+          aria-label="Email"
+                      class="transition-all duration-300 hover:text-blue-400 hover:scale-110"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+            <path d="M3 7l9 6l9 -6" />
+          </svg>
+        </a>
+      )
+    }
+    {
+      siteConfig.social?.linkedin && (
+        <a
+          href={siteConfig.social.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+                      class="transition-all duration-300 hover:text-blue-400 hover:scale-110"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+          >
+            <>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M8 11v5" />
+              <path d="M8 8v.01" />
+              <path d="M12 16v-5" />
+              <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+              <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+            </>
+          </svg>
+        </a>
+      )
+    }
+    {
+      siteConfig.social?.twitter && (
+        <a
+          href={siteConfig.social.twitter}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter"
+                      class="transition-all duration-300 hover:text-blue-400 hover:scale-110"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+          >
+            <>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+            </>
+          </svg>
+        </a>
+      )
+    }
+    {
+      siteConfig.social?.github && (
+        <a
+          href={siteConfig.social.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+                      class="transition-all duration-300 hover:text-blue-400 hover:scale-110"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+          >
+            <>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+            </>
+          </svg>
+        </a>
+      )
+    }
+  </div>
+</div>
+
+        <script>
+          // Professional Particle Constellation
+          class ParticleConstellation {
+            constructor() {
+              this.canvas = document.getElementById('geometric-canvas');
+              this.ctx = this.canvas.getContext('2d');
+              this.mouseX = 0;
+              this.mouseY = 0;
+              this.particles = [];
+              this.connections = [];
+              this.animationId = null;
+              this.time = 0;
+
+              this.init();
+              this.bindEvents();
+            }
+
+            init() {
+              this.resizeCanvas();
+              this.createParticles();
+              this.animate();
+            }
+
+            resizeCanvas() {
+              this.canvas.width = window.innerWidth;
+              this.canvas.height = window.innerHeight;
+            }
+
+            createParticles() {
+              this.particles = [];
+              const particleCount = 250;
+              
+              for (let i = 0; i < particleCount; i++) {
+                this.particles.push({
+                  x: Math.random() * this.canvas.width,
+                  y: Math.random() * this.canvas.height,
+                  originalX: Math.random() * this.canvas.width,
+                  originalY: Math.random() * this.canvas.height,
+                  vx: (Math.random() - 0.5) * 0.5,
+                  vy: (Math.random() - 0.5) * 0.5,
+                  size: Math.random() * 3 + 2,
+                  opacity: Math.random() * 0.8 + 0.4,
+                  maxOpacity: Math.random() * 0.9 + 0.5,
+                  twinkleSpeed: Math.random() * 0.02 + 0.01,
+                  twinklePhase: Math.random() * Math.PI * 2,
+                  mouseInfluence: Math.random() * 0.3 + 0.1,
+                  trail: []
+                });
+              }
+            }
+
+            draw() {
+              // Clear canvas completely
+              this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+              
+              // Update and draw particles
+              this.particles.forEach(particle => {
+                this.updateParticle(particle);
+                this.drawParticle(particle);
+              });
+              
+              // Draw connections
+              this.drawConnections();
+            }
+
+            updateParticle(particle) {
+              // Calculate distance from mouse
+              const mouseDist = Math.sqrt(
+                (particle.x - this.mouseX) ** 2 + (particle.y - this.mouseY) ** 2
+              );
+              const maxDist = Math.min(this.canvas.width, this.canvas.height) / 3;
+              const influence = Math.max(0, 1 - mouseDist / maxDist);
+              
+              // Mouse attraction/repulsion
+              const mouseAngle = Math.atan2(this.mouseY - particle.y, this.mouseX - particle.x);
+                              const attractionForce = influence * particle.mouseInfluence * 0.045;
+              
+              // Apply mouse influence
+              particle.vx += Math.cos(mouseAngle) * attractionForce;
+              particle.vy += Math.sin(mouseAngle) * attractionForce;
+              
+              // Damping
+              particle.vx *= 0.98;
+              particle.vy *= 0.98;
+              
+              // Update position
+              particle.x += particle.vx;
+              particle.y += particle.vy;
+              
+              // Boundary wrapping
+              if (particle.x < 0) particle.x = this.canvas.width;
+              if (particle.x > this.canvas.width) particle.x = 0;
+              if (particle.y < 0) particle.y = this.canvas.height;
+              if (particle.y > this.canvas.height) particle.y = 0;
+              
+              // No trails needed
+              
+              // Twinkling effect
+              particle.twinklePhase += particle.twinkleSpeed;
+              particle.opacity = particle.maxOpacity * (0.5 + 0.5 * Math.sin(particle.twinklePhase));
+            }
+
+            drawParticle(particle) {
+              // Draw particle
+              const mouseDist = Math.sqrt(
+                (particle.x - this.mouseX) ** 2 + (particle.y - this.mouseY) ** 2
+              );
+              const maxDist = Math.min(this.canvas.width, this.canvas.height) / 4;
+              const glowIntensity = Math.max(0, 1 - mouseDist / maxDist);
+              
+              // Particle glow
+              if (glowIntensity > 0) {
+                this.ctx.shadowColor = 'rgba(255, 255, 255, 0.9)';
+                this.ctx.shadowBlur = glowIntensity * 20;
+              } else {
+                this.ctx.shadowBlur = 0;
+              }
+              
+              // Draw particle
+              this.ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity + glowIntensity * 0.4})`;
+              this.ctx.beginPath();
+              this.ctx.arc(particle.x, particle.y, particle.size + glowIntensity * 3, 0, Math.PI * 2);
+              this.ctx.fill();
+              
+              this.ctx.shadowBlur = 0;
+            }
+
+            drawConnections() {
+              const maxConnectionDistance = Math.min(this.canvas.width, this.canvas.height) / 6;
+              
+              for (let i = 0; i < this.particles.length; i++) {
+                for (let j = i + 1; j < this.particles.length; j++) {
+                  const p1 = this.particles[i];
+                  const p2 = this.particles[j];
+                  
+                  const distance = Math.sqrt(
+                    (p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2
+                  );
+                  
+                  if (distance < maxConnectionDistance) {
+                    // Calculate mouse influence on connection
+                    const midX = (p1.x + p2.x) / 2;
+                    const midY = (p1.y + p2.y) / 2;
+                    const mouseDist = Math.sqrt(
+                      (midX - this.mouseX) ** 2 + (midY - this.mouseY) ** 2
+                    );
+                    const maxDist = Math.min(this.canvas.width, this.canvas.height) / 3;
+                    const influence = Math.max(0, 1 - mouseDist / maxDist);
+                    
+                    // Connection opacity based on distance and mouse influence
+                    const opacity = (1 - distance / maxConnectionDistance) * (0.1 + influence * 0.2);
+                    
+                    if (opacity > 0.05) {
+                      this.ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
+                      this.ctx.lineWidth = 0.5;
+                      this.ctx.beginPath();
+                      this.ctx.moveTo(p1.x, p1.y);
+                      this.ctx.lineTo(p2.x, p2.y);
+                      this.ctx.stroke();
+                    }
+                  }
+                }
+              }
+            }
+
+            animate() {
+              this.time += 0.016;
+              this.draw();
+              this.animationId = requestAnimationFrame(() => this.animate());
+            }
+
+            bindEvents() {
+              // Mouse movement tracking
+              document.addEventListener('mousemove', (e) => {
+                this.mouseX = e.clientX;
+                this.mouseY = e.clientY;
+              });
+
+              // Window resize
+              window.addEventListener('resize', () => {
+                this.resizeCanvas();
+                this.createParticles();
+              });
+            }
+          }
+
+          // Initialize particle constellation when DOM is loaded
+          document.addEventListener('DOMContentLoaded', () => {
+            new ParticleConstellation();
+          });
+        </script>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Low-polygon canvas styling */
+  #geometric-canvas {
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  /* Low-polygon container styling */
+  #geometric-container {
+    pointer-events: none;
+  }
+
+  /* Enhanced text effects */
+  .bg-gradient-to-r {
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease-in-out infinite;
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Custom radial gradient for nebula effect */
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+</style>
