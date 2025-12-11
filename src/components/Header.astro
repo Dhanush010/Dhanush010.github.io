@@ -2,6 +2,7 @@
 import { siteConfig } from "../config";
 
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+const hasOpenSource = siteConfig.openSource && siteConfig.openSource.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
@@ -21,6 +22,18 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             About
           </a>
         </li>
+        {
+          hasOpenSource && (
+            <li>
+              <a
+                href="#opensource"
+                class="text-blue-600 hover:text-blue-200 transition-all duration-500 ease-out font-medium px-3 py-2 rounded-lg hover:scale-105"
+              >
+                Open Source
+              </a>
+            </li>
+          )
+        }
         {
           hasProjects && (
             <li>

@@ -219,8 +219,8 @@ import { siteConfig } from "../config";
                   y: Math.random() * this.canvas.height,
                   originalX: Math.random() * this.canvas.width,
                   originalY: Math.random() * this.canvas.height,
-                  vx: (Math.random() - 0.5) * 0.5,
-                  vy: (Math.random() - 0.5) * 0.5,
+                  vx: (Math.random() - 0.5) * 0.2,
+                  vy: (Math.random() - 0.5) * 0.2,
                   size: Math.random() * 3 + 2,
                   opacity: Math.random() * 0.8 + 0.4,
                   maxOpacity: Math.random() * 0.9 + 0.5,
@@ -256,15 +256,15 @@ import { siteConfig } from "../config";
               
               // Mouse attraction/repulsion
               const mouseAngle = Math.atan2(this.mouseY - particle.y, this.mouseX - particle.x);
-                              const attractionForce = influence * particle.mouseInfluence * 0.045;
+              const attractionForce = influence * particle.mouseInfluence * 0.008;
               
               // Apply mouse influence
               particle.vx += Math.cos(mouseAngle) * attractionForce;
               particle.vy += Math.sin(mouseAngle) * attractionForce;
               
               // Damping
-              particle.vx *= 0.98;
-              particle.vy *= 0.98;
+              particle.vx *= 0.99;
+              particle.vy *= 0.99;
               
               // Update position
               particle.x += particle.vx;
