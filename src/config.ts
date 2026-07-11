@@ -1,11 +1,18 @@
 export const siteConfig = {
   name: "Dhanushkumar Jayakumar Vasuki",
   shortName: "DJV",
-  title: "Backend Engineer & Open Source Contributor",
+  title: "Software Engineer & Open Source Contributor",
   tagline: "NYU CS Engineering • GPA 4.0",
   availability: "// Available for SWE roles • US-Wide (On-site / Remote )",
+  heroCard: {
+    role: "Software Engineer",
+    location: "US-Wide",
+    status: "open to work",
+    gsoc: "GSoC 2026 @ LBL",
+    gpa: "4.0",
+  },
   description:
-    "Backend engineer and open source contributor. GSoC 2026 @ Lawrence Berkeley National Lab. Merged PRs at Netflix & Roblox.",
+    "Software engineer and open source contributor. GSoC 2026 @ Lawrence Berkeley National Lab. Merged PRs at Netflix & Roblox.",
   accentColor: "#6366f1",
   achievements: [
     "GSoC 2026 @ Lawrence Berkeley National Lab",
@@ -53,7 +60,7 @@ export const siteConfig = {
       prNumber: "#2672",
       prTitle: "Fix JobSet with @retry(times=0) validation error",
       description:
-        "Diagnosed invalid Kubernetes template names from missing retryStrategy logic in Metaflow Ray's JobSet generation. Refactored retry-handling to inject template variables conditionally — passed 32 CI checks.",
+        "Diagnosed invalid Kubernetes template names from missing retryStrategy logic in Metaflow Ray's JobSet generation. Refactored retry-handling to inject template variables conditionally - passed 32 CI checks.",
       tags: ["Python", "Kubernetes", "Argo Workflows", "CI/CD"],
       prLink: "https://github.com/Netflix/metaflow/pull/2672",
     },
@@ -186,7 +193,7 @@ export const siteConfig = {
   contact: {
     heading: "Let's work together",
     description:
-      "I'm looking for software engineering roles — backend, platform, or full-stack. Open to internships, new grad, and junior SWE positions.",
+      "I'm looking for software engineering roles - backend, platform, or full-stack. Open to internships, new grad, and junior SWE positions.",
     location: "New York, US",
   },
 };
