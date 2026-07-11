@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "DJV",
   title: "Backend Engineer & Open Source Contributor",
   tagline: "NYU CS Engineering • GPA 4.0",
-  availability: "// Available for SWE roles • New York",
+  availability: "// Available for SWE roles • US-Wide (On-site / Remote )",
   description:
     "Backend engineer and open source contributor. GSoC 2026 @ Lawrence Berkeley National Lab. Merged PRs at Netflix & Roblox.",
   accentColor: "#6366f1",
