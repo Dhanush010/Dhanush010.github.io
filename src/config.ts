@@ -1,115 +1,192 @@
 export const siteConfig = {
   name: "Dhanushkumar Jayakumar Vasuki",
-  title: "Computer Engineering Graduate Student",
-  description: "Master's student at NYU with experience in software development, cybersecurity, and machine learning",
-  accentColor: "#3B82F6",
+  shortName: "DJV",
+  title: "Backend Engineer & Open Source Contributor",
+  tagline: "NYU CS Engineering • GPA 4.0",
+  availability: "// Available for SWE roles • New York",
+  description:
+    "Backend engineer and open source contributor. GSoC 2026 @ Lawrence Berkeley National Lab. Merged PRs at Netflix & Roblox.",
+  accentColor: "#6366f1",
+  achievements: [
+    "GSoC 2026 @ Lawrence Berkeley National Lab",
+    "Merged PRs at Netflix & Roblox",
+    "Built production systems on Kubernetes",
+  ],
   social: {
     email: "dj2680@nyu.edu",
     linkedin: "https://www.linkedin.com/in/dhanushkumar-jv-2b0564248/",
-    twitter: "",
     github: "https://github.com/Dhanush010",
   },
-  aboutMe:
-    "I'm a Software Engineer and Master's student in Computer Engineering at NYU, specializing in backend systems, interactive applications, and scalable full-stack development. I enjoy building products that are reliable, performant, and easy for people to use.\n\nAcross industry and academic projects, I've worked on real-time collaboration tools, algorithm visualization platforms, system-level automation, and decentralized applications. My experience spans Python, JavaScript/TypeScript, Node.js, React, MongoDB, SQL, distributed systems, and system design.\n\nI care deeply about clean architecture, maintainable code, and creating tools that genuinely improve user experience. I also contribute to open-source projects and love working in collaborative engineering environments.",
-  skills: ["Python", "Java", "C", "C++", "JavaScript", "React", "Node.js", "TensorFlow", "PyTorch", "scikit-learn", "Flask", "Django", "SQL", "MongoDB", "Hyperledger Fabric", "AWS", "Git", "Linux", "Mainframe", "PL/SQL", "HTML", "CSS", "Express.js", "REST API", "pandas", "NumPy", "Matplotlib", "MySQL"],
-  projects: [
+  about: [
+    "I build backend systems that are fast, tested, and actually deployed. Currently contributing to AIDRIN at Lawrence Berkeley National Lab through Google Summer of Code 2026, extending scientific data format support for ML readiness inspection.",
+    "Previously at Tata Consultancy Services building distributed backend systems, and I've had PRs merged into Netflix Metaflow and Roblox's safety evaluation pipeline.",
+    "I'm looking for software engineering roles where I can work on systems that matter at scale.",
+  ],
+  experience: [
     {
-      name: "SyncScribe - Real-time Collaborative Document Editor",
-      description:
-        "SyncScribe is a full-stack, real-time collaborative document editing platform inspired by Google Docs. Multiple users can edit documents simultaneously with instant synchronization, live cursor tracking, and presence indicators. Key features include JWT authentication, version history, collaborative comments, document sharing, and export to PDF/DOCX/TXT/Markdown. The application uses WebSocket technology for low-latency real-time updates and is fully containerized with Docker Compose for easy deployment.",
-      link: "https://github.com/Dhanush010/Syncscribe",
-      skills: ["JavaScript", "React", "Node.js", "Express", "MongoDB", "WebSockets", "Quill.js", "Docker"],
+      dateRange: "Jun 2026 – Sep 2026",
+      title: "Google Summer of Code 2026",
+      company: "Open-Source Contributor @ Lawrence Berkeley National Laboratory",
+      bullets: [
+        "Extended AIDRIN's file format support to Zarr and ROOT by designing a custom ingestion interface, enabling ML readiness inspection across 2 new scientific data formats used at national labs.",
+        "Hardened the HDF5 reader and added multi-file ingestion support; contributed merged PRs including ML framework robustness improvements.",
+      ],
+      tags: ["Python", "HDF5", "Zarr", "ROOT", "NumPy", "Open Source"],
     },
     {
-      name: "AlgoViz - Interactive Algorithm Visualizer",
-      description:
-        "Developed an interactive Algorithm Visualizer web app using React.js that animates step-by-step executions of sorting and searching algorithms (Bubble Sort, Merge Sort, Quick Sort, Binary Search), featuring real-time pseudocode highlighting, dynamic controls for array size and speed, and a responsive, user-friendly interface.",
-      link: "https://github.com/Dhanush010/AlgoViz",
-      skills: ["React", "JavaScript", "CSS3", "HTML", "SVG/Canvas"],
-    },
-    {
-      name: "Advanced Intrusion Detection Framework",
-      description:
-        "Developed a two-stage intrusion detection system using Autoencoder and LSTM that boosted cyber threat detection accuracy and significantly cut false positives in live network environments. Integrated with Flask for real-time monitoring and alerts.",
-      link: "https://github.com/Dhanush010/Advanced-Intrusion-Detection-Framework-Leveraging-Auto-Encoder-and-LSTM",
-      skills: ["Python", "Flask", "TensorFlow", "scikit-learn", "Machine Learning"],
-    },
-    {
-      name: "Library Book Management System using Blockchain",
-      description:
-        "Developed a decentralized library book management system using Hyperledger Fabric and smart contracts, ensuring secure, transparent, and tamper-proof transaction tracking. Enhanced accountability and operational efficiency with a Python backend and user-friendly frontend.",
-      link: "https://github.com/Dhanush010/Library-Book-Management-Using-Blockchain-Technology",
-      skills: ["Hyperledger Fabric", "Python", "Smart Contracts", "HTML", "CSS", "JavaScript"],
+      dateRange: "Jul 2024 – Jul 2025",
+      title: "Assistant System Engineer",
+      company: "Tata Consultancy Services · Kochi, India",
+      bullets: [
+        "Built scalable backend modules for a Cruise Management System in Java/JDBC/SQL, improving scheduling efficiency by 40%.",
+        "Maintained 100% SLA compliance monitoring 200+ daily batch jobs and resolving 50+ high-severity incidents monthly.",
+        "Automated job-monitoring workflows cutting manual effort by 20+ hrs/month.",
+      ],
+      tags: ["Java", "SQL", "Mainframe", "Linux", "REST APIs"],
     },
   ],
   openSource: [
     {
-      organization: "Netflix - Metaflow",
-      pr: "Fix JobSet with @retry(times=0) validation error (#2672)",
+      org: "Netflix / Metaflow",
+      icon: "N",
+      iconColor: "#E50914",
+      prNumber: "#2672",
+      prTitle: "Fix JobSet with @retry(times=0) validation error",
+      description:
+        "Diagnosed invalid Kubernetes template names from missing retryStrategy logic in Metaflow Ray's JobSet generation. Refactored retry-handling to inject template variables conditionally — passed 32 CI checks.",
+      tags: ["Python", "Kubernetes", "Argo Workflows", "CI/CD"],
       prLink: "https://github.com/Netflix/metaflow/pull/2672",
-      description: [
-        "Identified and resolved a JobSet generation failure in Metaflow Ray where @retry(times=0) produced invalid Kubernetes JobSet names due to missing retryStrategy, causing workflow submission errors.",
-        "Refactored retry-handling logic by computing total retries from decorators and conditionally injecting retry template variables into dag templates() and container templates(), ensuring full Argo Workflows compatibility; fix passed CI (32 checks) and was merged into Metaflow main (commit a881605).",
-      ],
     },
     {
-      organization: "Roblox / RobloxGuard-1.0",
-      pr: "fix: resolve dtype, decoding, and padding issues for safety evaluation (#9)",
+      org: "Roblox / RobloxGuard",
+      icon: "R",
+      iconColor: "#00A2FF",
+      prNumber: "#9",
+      prTitle: "Fix dtype, decoding, and padding issues in LLaMA safety eval",
+      description:
+        "Resolved dtype mismatch, decoding failures, and padding bugs in the LLaMA 3.1 evaluation pipeline. Refactored inference.py closing all issues from GitHub Issue #4.",
+      tags: ["Python", "LLaMA", "ML Evaluation", "PyTorch"],
       prLink: "https://github.com/Roblox/RobloxGuard-1.0/pull/9",
-      description: [
-        "Fixed dtype, decoding, and padding bugs in the evaluation pipeline (LLaMA 3.1), adding dynamic dtype selection, left-padding, and configurable deterministic generation; merged to main (#9).",
-        "Improved numerical accuracy, reproducibility, and batch safety by refactoring inference.py and resolving all issues reported in GitHub Issue #4.",
-      ],
     },
   ],
-  experience: [
+  projects: [
     {
-      company: "Tata Consultancy Services",
-      title: "Associate System Engineer",
-      dateRange: "July 2024 - July 2025",
-      bullets: [
-        "Completed training focused on Core Java (OOPs, Collections, Interfaces, Exception Handling), Advanced Java (Servlets, JSP, JDBC), UI development (HTML, CSS, JavaScript), SQL/PL SQL, and Unix fundamentals",
-        "Provided production support for mainframe systems by monitoring batch jobs, resolving abends, handling critical incidents, and ensuring strict SLA compliance (maintained 100% SLA adherence during first 6 months)",
-        "Proposed and implemented automation improvements in job monitoring processes, reducing manual effort and increasing the efficiency of the operations",
-        "Authored Standard Operating Procedures (SOPs) to support knowledge transfer and onboarding of new joiners in the production support team",
-        "Handled critical production incidents during off-hours with zero SLA breaches, ensuring uninterrupted business continuity and system reliability",
-      ],
+      tier: "featured",
+      name: "BestShot - MLOps Platform on Kubernetes",
+      badge: "MLOps · Kubernetes",
+      description:
+        "Bootstrapped a production K3s cluster on Chameleon CHI@TACC bare-metal GPU. Designed staging/canary/production environments with automated model promotion CronJobs - 5-day uptime, 0 pod restarts. Built full CI/CD pipeline via GitHub Actions → GHCR.",
+      tags: ["K3s", "Kubernetes", "GitHub Actions", "MLflow", "Prometheus", "Docker"],
+      github: "https://github.com/Dhanush010/Bestshot",
     },
     {
-      company: "Tamil Nadu Police Cyber Crime Wing",
-      title: "Cybersecurity Intern",
-      dateRange: "February 2024 - March 2024",
-      bullets: [
-        "Conducted system security assessments and proposed mitigations, protecting large-scale public systems and reducing potential breaches by 30%",
-        "Analyzed cyber threats and vulnerabilities in government systems",
-        "Collaborated with law enforcement teams on digital forensics and incident response",
-        "Documented security findings and provided recommendations for system hardening",
-      ],
+      tier: "main",
+      name: "URL Shortener",
+      badge: "Live",
+      live: true,
+      description:
+        "Production-grade rate-limited URL shortener. Redis cache-aside pattern serving hot redirects at <10ms p95 under 500 concurrent users. 91% test coverage with testcontainers. Sliding-window rate limiter, RFC 7807 error responses, Alembic migrations.",
+      tags: ["FastAPI", "PostgreSQL", "Redis", "Pytest", "Locust", "Docker"],
+      github: "https://github.com/Dhanush010/URL-Shortener",
+      docs: "https://url-shortener-autr.onrender.com/docs",
+    },
+    {
+      tier: "main",
+      name: "CTR Prediction - Criteo Ad Pipeline",
+      badge: "Big Data · ML",
+      description:
+        "Cardinality-aware PySpark feature pipeline encoding 39 columns into 278,589-dim sparse vectors across 45.8M impressions. Isotonic regression calibration correcting CTR bias (~25.6% observed vs ~5% real-world).",
+      tags: ["PySpark", "XGBoost", "Python", "Streamlit"],
+      github: "https://github.com/Dhanush010/criteo-ctr-prediction",
+    },
+    {
+      tier: "other",
+      name: "SyncScribe - Real-Time Collaborative Editor",
+      badge: "Full-Stack · Real-Time",
+      description:
+        "Google Docs-style collaborative editor with live cursor tracking and multi-user presence. Built with Node.js, WebSockets, and MongoDB for sub-50ms sync latency. JWT authentication, version history, document sharing, and export to PDF/DOCX. Fully containerized with Docker Compose.",
+      tags: ["React", "Node.js", "WebSockets", "MongoDB", "Docker", "JWT"],
+      github: "https://github.com/Dhanush010/Syncscribe",
+    },
+    {
+      tier: "other",
+      name: "AE-LSTM Intrusion Detection Framework",
+      badge: "ML · Cybersecurity",
+      description:
+        "Hybrid Autoencoder + LSTM model trained on the UNSW-NB15 dataset achieving 92% detection accuracy with 15% fewer false positives than baseline approaches. Autoencoder reduces feature dimensionality before LSTM sequence modeling detects attack patterns. Flask dashboard for real-time monitoring cut incident response time by 7 minutes.",
+      tags: ["Python", "TensorFlow", "Scikit-learn", "Flask", "LSTM", "Autoencoder"],
+      github:
+        "https://github.com/Dhanush010/Advanced-Intrusion-Detection-Framework-Leveraging-Auto-Encoder-and-LSTM",
+    },
+    {
+      tier: "other",
+      name: "AlgoViz - Interactive Algorithm Visualizer",
+      badge: "Frontend · Education",
+      description:
+        "React app that animates step-by-step execution of sorting and searching algorithms with real-time pseudocode highlighting. Implements Bubble Sort, Merge Sort, Quick Sort, and Binary Search with dynamic controls for array size and animation speed. Optimized React rendering reduced frame lag by 25% during heavy animations.",
+      tags: ["React", "JavaScript", "CSS", "SVG"],
+      github: "https://github.com/Dhanush010/AlgoViz",
     },
   ],
-  education: [
+  skills: [
     {
-      school: "New York University",
-      degree: "Master's in Computer Engineering",
-      dateRange: "September 2025 - May 2027",
-      achievements: [
-        "Currently pursuing advanced studies in Computer Engineering with focus on AI/ML and cybersecurity",
-        "Engaging in cutting-edge research and practical applications of emerging technologies",
-        "Building expertise in machine learning, deep learning, and advanced software engineering practices",
-        "Participating in university research projects and industry collaborations",
+      category: "Languages",
+      icon: "code",
+      items: ["Java", "Python", "C/C++", "SQL", "JavaScript", "HTML/CSS"],
+    },
+    {
+      category: "Backend & APIs",
+      icon: "server",
+      items: [
+        "FastAPI",
+        "Node.js",
+        "Express.js",
+        "Flask",
+        "REST APIs",
+        "Redis",
+        "PostgreSQL",
+        "MongoDB",
+        "Alembic",
       ],
     },
     {
-      school: "SASTRA University",
-      degree: "Bachelor's of Technology in Computer Science and Engineering",
-      dateRange: "August 2020",
-      achievements: [
-        "Graduated with Cumulative GPA: 8.71/10.00",
-        "Completed comprehensive coursework in computer science fundamentals, algorithms, and software engineering",
-        "Developed strong foundation in programming languages, data structures, and system design",
-        "Participated in technical competitions and collaborative projects throughout academic career",
+      category: "DevOps & Cloud",
+      icon: "cloud",
+      items: [
+        "Kubernetes (K3s)",
+        "Docker",
+        "GitHub Actions",
+        "AWS (EC2, S3)",
+        "Linux",
+        "Prometheus",
+        "Grafana",
+        "CI/CD",
       ],
+    },
+    {
+      category: "Data & ML",
+      icon: "chart",
+      items: [
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "PySpark",
+        "MLflow",
+        "Pandas",
+        "NumPy",
+      ],
+    },
+    {
+      category: "Testing & Load",
+      icon: "test",
+      items: ["Pytest", "testcontainers", "Locust"],
+      fullWidth: true,
     },
   ],
+  contact: {
+    heading: "Let's work together",
+    description:
+      "I'm looking for software engineering roles — backend, platform, or full-stack. Open to internships, new grad, and junior SWE positions.",
+    location: "New York, US",
+  },
 };
-
