@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "DJV",
   title: "Software Engineer & Open Source Contributor",
   tagline: "NYU CS Engineering • GPA 4.0",
-  availability: "// Available for SWE roles • US-Wide (On-site / Remote )",
+  availability: "// Available for SWE roles • US-Wide (On-site / Remote)",
   heroCard: {
     role: "Software Engineer",
     location: "US-Wide",
